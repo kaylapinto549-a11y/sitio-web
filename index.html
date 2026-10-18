@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kayla Boutique · Viste tu estilo, brilla con luz propia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <a href="#inicio" class="marca">
+      <svg class="logo" viewBox="0 0 64 64" role="img" aria-label="Logo Kayla Boutique">
+        <defs>
+          <linearGradient id="gLogo" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff7eb3"/>
+            <stop offset="1" stop-color="#9b5de5"/>
+          </linearGradient>
+        </defs>
+        <circle cx="32" cy="32" r="30" fill="url(#gLogo)"/>
+        <path d="M22 17v32M22 35l19-17M27 32l16 17" stroke="#fff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path transform="translate(1,-2)" fill="#ffd84d" stroke="#fff" stroke-width="1" stroke-linejoin="round"
+              d="M47 6 48.76 10.57 53.66 10.84 49.85 13.93 51.12 18.66 47 16 42.88 18.66 44.15 13.93 40.34 10.84 45.24 10.57Z"/>
+      </svg>
+      <span class="marca-texto">
+        <strong>Kayla Boutique</strong>
+        <small>Moda con estilo</small>
+      </span>
+    </a>
+
+    <nav id="menu" class="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#como-pedir">Cómo pedir</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="acciones">
+      <button id="abrirCarrito" class="btn-carrito" aria-label="Abrir carrito">🛒 <span id="contador">0</span></button>
+      <button id="btnMenu" class="btn-menu" aria-label="Menú">☰</button>
+    </div>
+  </header>
+
+  <!-- INICIO -->
+  <section id="inicio" class="hero">
+    <p class="etiqueta">✨ Nueva colección</p>
+    <h1>Viste tu estilo,<br><span>brilla con luz propia</span></h1>
+    <p class="sub">Prendas con personalidad para cada momento. Elige tu favorita y pídela por WhatsApp.</p>
+    <a href="#catalogo" class="btn-principal">Ver catálogo</a>
+    <div id="inicioCategorias" class="inicio-grid"></div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section id="catalogo" class="seccion">
+    <h2 class="titulo">Catálogo</h2>
+    <p class="subtitulo">Encuentra tu próximo outfit</p>
+    <input id="buscador" class="buscador" type="search" placeholder="🔍 Buscar prenda...">
+    <div id="filtros" class="filtros"></div>
+    <div id="productos" class="productos"></div>
+    <p id="sinResultados" class="sin-resultados" hidden>No encontramos prendas con esa búsqueda 😢</p>
+  </section>
+
+  <!-- CÓMO PEDIR -->
+  <section id="como-pedir" class="seccion pasos-sec">
+    <h2 class="titulo">Cómo pedir</h2>
+    <p class="subtitulo">Es muy fácil, solo 3 pasos</p>
+    <div class="pasos">
+      <div class="paso">
+        <span class="num">1</span>
+        <h3>Explora el catálogo</h3>
+        <p>Mira todas las prendas, filtra por categoría y elige tu talla.</p>
+      </div>
+      <div class="paso">
+        <span class="num">2</span>
+        <h3>Añade al carrito</h3>
+        <p>Pulsa "Agregar al carrito" en todo lo que te guste.</p>
+      </div>
+      <div class="paso">
+        <span class="num">3</span>
+        <h3>Pídelo por WhatsApp</h3>
+        <p>Abre el carrito, escribe tu nombre y presiona el botón verde para enviarnos tu pedido.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="seccion contacto">
+    <h2 class="titulo">Contacto</h2>
+    <p class="subtitulo">¿Dudas? Escríbenos, con gusto te ayudamos</p>
+    <a id="whatsappContacto" class="btn-wa" href="#">💬 Escribir por WhatsApp</a>
+    <p class="ubic">📍 Estamos ubicados en Canalete, Córdoba · Entrega a nivel nacional</p>
+  </section>
+
+  <!-- PIE -->
+  <footer class="footer">
+    <p>© <span id="anio"></span> Kayla Boutique · Viste tu estilo, brilla con luz propia</p>
+  </footer>
+
+  <!-- CARRITO -->
+  <div id="velo" class="velo" hidden></div>
+  <aside id="carrito" class="carrito">
+    <div class="carrito-cab">
+      <h3>🛒 Tu carrito</h3>
+      <button id="cerrarCarrito" aria-label="Cerrar">✕</button>
+    </div>
+    <div id="carritoLista" class="carrito-lista"></div>
+    <div class="carrito-pie">
+      <div class="total-fila"><span>Total</span><strong id="total">$0</strong></div>
+      <input id="nombreCliente" type="text" placeholder="Tu nombre">
+      <textarea id="notaCliente" rows="2" placeholder="Nota (opcional)"></textarea>
+      <button id="pedirWhatsapp" class="btn-wa">Pedir por WhatsApp</button>
+      <button id="vaciar" class="btn-vaciar">Vaciar carrito</button>
+    </div>
+  </aside>
+
+  <a id="whatsappFlotante" class="wa-flotante" href="#" aria-label="WhatsApp">💬</a>
+  <div id="aviso" class="aviso"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
